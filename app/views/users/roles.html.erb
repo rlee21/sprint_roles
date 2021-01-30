@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sprint Roles</h1>
+
+<% @roles.each do |role| %>
+    <%= role %>
+<% end %>
+
+<%= button_to 'Generate Roles', roles_users_path %>
+
