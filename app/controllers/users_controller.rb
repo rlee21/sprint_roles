@@ -40,6 +40,7 @@ class UsersController < ApplicationController
 
   def roles
     @roles = RolesGenerator.call
+    @pairs = PairsGenerator.call
   end
 
   private
