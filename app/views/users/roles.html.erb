@@ -2,9 +2,26 @@
 
 <h1>Sprint Roles</h1>
 
-<% @roles.each do |role| %>
-    <%= role %>
-<% end %>
+<%# <% @roles.each do |r| %1> %>
+<%#     <%= <b>"#{r.first}: #{r.last}" %1> %>
+<%#     <br> %>
+<%#     <br> %>
+<%# <% end %1> %>
+
+<table class="roles-table">
+  <thead>
+    <tr>
+      <th><%= "Name"%></th>
+      <th><%= "Role"%></th>
+    </tr>
+  </thead>
+
+  <% @roles.each do |r| %>
+    <tr>
+      <td><%= r.first %></td>
+      <td><%= r.last %></td>
+    </tr>
+  <% end %>
+</table>
 
 <%= button_to 'Generate Roles', roles_users_path %>
-
