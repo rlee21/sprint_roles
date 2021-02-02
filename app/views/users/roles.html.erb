@@ -1,39 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sprint Roles</h1>
+<div class="roles-container">
+  <h2>Sprint Roles</h2>
 
-<table class="roles-table">
-  <thead>
-    <tr>
-      <th><%= "Name"%></th>
-      <th><%= "Role"%></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th><%="Name"%></th>
+        <th><%="Role"%></th>
+      </tr>
+    </thead>
 
-  <% @roles.each do |r| %>
-    <tr>
-      <td><%= r.first %></td>
-      <td><%= r.last %></td>
-    </tr>
-  <% end %>
-</table>
+    <% @roles.each do |r| %>
+      <tr>
+        <td><%= r.first %></td>
+        <td><%= r.last %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<h1>Pairing Partners</h1>
+<div class="pairs-container">
+  <h2>Pairing Partners</h2>
 
-<table class="pairs-table">
-  <thead>
-    <tr>
-      <th><%= "Name"%></th>
-      <th><%= "Role"%></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th><%="Pair1"%></th>
+        <th><%="Pair2"%></th>
+      </tr>
+    </thead>
 
-  <% @pairs.each do |r| %>
-    <tr>
-      <td><%= r.first %></td>
-      <td><%= r.last %></td>
-    </tr>
-  <% end %>
-</table>
+    <% @pairs.each do |r| %>
+      <tr>
+        <td><%= r.first %></td>
+        <td><%= r.last %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<br>
 
-<%= button_to 'Update', roles_users_path %>
+<div class="update-btn-container">
+  <%= button_to 'Update', roles_users_path, class: "roles-btn" %><br>
+</div>
