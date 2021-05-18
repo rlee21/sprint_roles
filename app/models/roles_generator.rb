@@ -1,6 +1,6 @@
 class RolesGenerator
 
-  ROLES = roles = [:retro, :planning, :grooming1, :grooming2, :roles_rotation].freeze
+  ROLES = roles = [:retro, :planning, :roles_rotation].freeze
 
   def self.call(team: "consumer")
     members = User.where(team: team.titlecase, active: true).pluck(:name)
