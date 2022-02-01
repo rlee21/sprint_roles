@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="users-link">
+  <%= link_to "Manage Users", users_path %>
+</div>
+
 <div class="roles">
   <h2>Sprint Roles</h2>
 
@@ -42,5 +46,5 @@
 <br>
 
 <div class="update-btn">
-  <%= button_to 'Update', roles_users_path, class: "roles-btn" %><br>
+  <%= button_to "Update", roles_users_path, class: "roles-btn" %>
 </div>
